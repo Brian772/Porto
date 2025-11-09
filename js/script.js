@@ -8,7 +8,7 @@ const projects = [
         image: "images/p-porto.png",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://brian12.netlify.app/",
-        codeUrl: "#",
+        codeUrl: "https://github.com/Brian772/Porto/tree/main",
         category: "web"
     }
 ];
@@ -493,4 +493,5 @@ window.GitHubPortfolio = {
     updateProfileInfo,
     updateRepositories
 };
+
 
