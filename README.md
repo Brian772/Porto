@@ -129,6 +129,13 @@ Modify keyframes in `styles.css` and update JavaScript animation triggers in `sc
 
 This project is open source and available under the [MIT License](LICENSE).
 
+## 👤 Author
+
+[Your Name]
+- Website: [your-website.com](https://your-website.com)
+- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- Email: your.email@example.com
+
 ---
 
 Built with ❤️ using HTML, CSS, and JavaScript

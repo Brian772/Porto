@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Ardhisswara</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Defer non-critical scripts for performance -->
+    <script src="js/script.js" defer></script>
+    <!-- reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Portofolio</a>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Brian Ardhisswara</span></h1>
+            <p class="hero-subtitle">Pelajar SMK PGRI 3 Malang</p>
+            <p class="hero-description"></p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+        <!-- Animated background gradient -->
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Halo, saya Brian, seorang pelajar dengan minat yang kuat di bidang teknologi informasi dan pemrograman. Saya memiliki ketertarikan khusus pada pengembangan website dan aplikasi, serta berkomitmen untuk terus mengasah kemampuan teknis dan kreativitas dalam dunia digital.</p>
+                    <p>Saya memiliki komitmen tinggi untuk terus belajar, berkembang, dan berkontribusi di dunia IT melalui berbagai proyek, baik secara individual maupun kolaboratif. Bagi saya, teknologi bukan hanya tentang menciptakan sesuatu yang canggih, tetapi juga tentang memberikan nilai nyata bagi masyarakat.</p>
+                    <p>Dengan semangat inovasi, disiplin, dan rasa ingin tahu yang kuat, saya bertekad menjadi bagian dari generasi muda yang mendorong perubahan positif melalui teknologi dan berperan aktif dalam membangun masa depan digital yang lebih baik.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/Brian.jpg" alt="Brian Ardhisswara" class="profile-image">
+            </div>
+        </div>
+    </section>
+    <p><hr></p>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards will be populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <img id="modal-image" src="" alt="" loading="lazy">
+                <p id="modal-description"></p>
+                <div class="modal-tech"></div>
+                <div class="modal-links">
+                    <a id="modal-live" href="#" target="_blank" class="btn">Live Demo</a>
+                    <a id="modal-code" href="#" target="_blank" class="btn">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p><hr></p>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Frontend</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                    </div>
+                    <span>HTML, CSS, JavaScript, Java</span>
+                </div>
+                <div class="skill-item">
+                    <h3>Backend</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                    </div>
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <h3>Design</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                    </div>
+                    <span>Figma, Affinity</span>
+                </div>
+                <div class="skill-item">
+                    <h3>Tools</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                    </div>
+                    <span>Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p><hr></p>
+
+    <!-- GitHub Section -->
+    <section id="github" class="github">
+        <div class="container">
+            <h2>My GitHub Profile</h2>
+            <div class="github-content">
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <h3>Repositories</h3>
+                        <span class="stat-number" id="repos-count">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Followers</h3>
+                        <span class="stat-number" id="followers-count">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Following</h3>
+                        <span class="stat-number" id="following-count">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Stars</h3>
+                        <span class="stat-number" id="stars-count">--</span>
+                    </div>
+                </div>
+                <div class="github-profile">
+                    <div class="profile-header">
+                        <img id="github-avatar" src="" alt="GitHub Avatar" class="github-avatar">
+                        <div class="profile-info">
+                            <h3 id="github-name">Loading...</h3>
+                            <p id="github-bio">Loading...</p>
+                            <a id="github-link" href="https://github.com/Brian772" target="_blank" class="github-btn">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recent-repos">
+                        <h3>Recent Repositories</h3>
+                        <div id="repos-list" class="repos-grid">
+                            <!-- Repositories will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p><hr></p>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form id="contact-form" action="https://formspree.io/f/xwplnkow" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6Lf2LgcsAAAAAID92-x0Xn-_nRHdwRlSZXeeXXpx"></div>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Brian Ardhisswara. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Brian772" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/bri.1an/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@ardhisswara" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
